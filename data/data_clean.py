@@ -11,6 +11,7 @@ new_name = 'new_' + fname
 fout = open(new_name, 'w')
 file_in = open(fname)
 string = file_in.read().replace('\n', ' ')
+string = string.replace('"', '')
 fout.write(string)
 fout.close()
 file_in.close()
