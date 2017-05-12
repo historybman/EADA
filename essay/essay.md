@@ -46,6 +46,7 @@ As mentioned, my analysis was mostly exploratory, not question-driven. I decided
 
 In my [Inaugural Address Analysis notebook](https://github.com/historybman/EADA/blob/master/Inaugural_Address_Analysis.ipynb), I ran several exploratory methods on my dataset. Starting off with the text analysis methods from Week 4, I performed Robinson's log-odds measure and Dunning's log-likelihood. I used these to measure the most overrepresented and underrepresented words across two categories: political party and incumbency. The results were interesting. Republican presidential speeches overrepresented the following words, according to the signed dunnings method:
 
+```
 TOP VALUES:
 law 37.85900298929792
 business 32.87730435677244
@@ -67,9 +68,11 @@ islands 14.88972168638792
 arbitration 14.88972168638792
 south 14.304357332097728
 prayer 13.7751544999991
+```
 
 Democratic presidents' speeches featured these words disproportionately: 
 
+```
 BOTTOM VALUES:
 which -25.587694865809624
 been -24.768251604369084
@@ -91,6 +94,7 @@ limits -16.276798224583224
 measures -15.846495944172565
 country's -15.213400850163701
 democracy -14.591557939972915
+```
 
 While there's no real logic to these, one thing that does strike me as interesting is the use of the first person in the Democratic presidents' speeches-- me, myself, my. I wonder if that overrepresentation is a result of an idiosyncracy-- FDR's stylistic approach, for instance (becuase he's definitely overrepresented in the sample). Or possibly Democratic presidents were more 'familiar' in their speeches. In any event, it was an interesting result. 
 
