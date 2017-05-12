@@ -39,9 +39,49 @@
 <p>As mentioned, my analysis was mostly exploratory, not question-driven. I decided that I wanted to run some of the classifiers to see how well they could distinguish the inaugural addresses across party, time, and party incumbency. In the end I dropped time becuase I realized first that I did not have enough data, and second that it would require a different approach, one that I am not sure I could perform with the limited amount of time I had for the rest of this project. In the end I did not write any new algorithms or adapt any modules from outside of class; rather I picked a few of what seemed like the most promising methods and I simply ran them mostly by cutting and pasting Ted’s code into my notebooks.</p>
 <h3 id="robinsons-log-odds-and-dunnings">Robinson’s Log Odds and Dunnings</h3>
 <p>In my <a href="https://github.com/historybman/EADA/blob/master/Inaugural_Address_Analysis.ipynb">Inaugural Address Analysis notebook</a>, I ran several exploratory methods on my dataset. Starting off with the text analysis methods from Week 4, I performed Robinson’s log-odds measure and Dunning’s log-likelihood. I used these to measure the most overrepresented and underrepresented words across two categories: political party and incumbency. The results were interesting. Republican presidential speeches overrepresented the following words, according to the signed dunnings method:</p>
-<p>TOP VALUES: law 37.85900298929792 business 32.87730435677244 enforcement 27.661956717563825 there 26.71258693822815 no 21.023840498701418 we 20.368952478920193 freedom 19.949151468604846 will 19.711108571025164 make 19.27829134912094 do 18.29887958039273 negro 17.7213002579283 amendment 17.662006465968325 accept 17.01798088257794 congress 16.84090924743422 america 16.585253111580684 method 14.88972168638792 islands 14.88972168638792 arbitration 14.88972168638792 south 14.304357332097728 prayer 13.7751544999991</p>
+<pre><code>TOP VALUES:
+law 37.85900298929792
+business 32.87730435677244
+enforcement 27.661956717563825
+there 26.71258693822815
+no 21.023840498701418
+we 20.368952478920193
+freedom 19.949151468604846
+will 19.711108571025164
+make 19.27829134912094
+do 18.29887958039273
+negro 17.7213002579283
+amendment 17.662006465968325
+accept 17.01798088257794
+congress 16.84090924743422
+america 16.585253111580684
+method 14.88972168638792
+islands 14.88972168638792
+arbitration 14.88972168638792
+south 14.304357332097728
+prayer 13.7751544999991</code></pre>
 <p>Democratic presidents’ speeches featured these words disproportionately:</p>
-<p>BOTTOM VALUES: which -25.587694865809624 been -24.768251604369084 powerful -24.257396715885317 powers -20.639945618320855 union -19.808186401517098 myself -19.68520084932692 me -19.212377774373138 foreign -18.94148581831667 my -18.87101149359202 -18.74433136968643 on -18.413088656786343 opinion -16.987689023401476 happy -16.890688937556916 fellow-citizens -16.81270986608169 spirit -16.686359964373743 period -16.515374263165533 limits -16.276798224583224 measures -15.846495944172565 country’s -15.213400850163701 democracy -14.591557939972915</p>
+<pre><code>BOTTOM VALUES:
+which -25.587694865809624
+been -24.768251604369084
+powerful -24.257396715885317
+powers -20.639945618320855
+union -19.808186401517098
+myself -19.68520084932692
+me -19.212377774373138
+foreign -18.94148581831667
+my -18.87101149359202
+ -18.74433136968643
+on -18.413088656786343
+opinion -16.987689023401476
+happy -16.890688937556916
+fellow-citizens -16.81270986608169
+spirit -16.686359964373743
+period -16.515374263165533
+limits -16.276798224583224
+measures -15.846495944172565
+country&#39;s -15.213400850163701
+democracy -14.591557939972915</code></pre>
 <p>While there’s no real logic to these, one thing that does strike me as interesting is the use of the first person in the Democratic presidents’ speeches– me, myself, my. I wonder if that overrepresentation is a result of an idiosyncracy– FDR’s stylistic approach, for instance (becuase he’s definitely overrepresented in the sample). Or possibly Democratic presidents were more ‘familiar’ in their speeches. In any event, it was an interesting result.</p>
 <p>Running the same analyses across the incumbency category, I was struck that speeches by presidents from newcomer parties overrepresented words like “no,” “any,” and “used,” in addition to the ones that we might recognize as reflecting the “change” in political regime: “renewal,” “begin,” “intention.” The list of overrepresented words in the incumbent speeches do not surprise much, but they too suggest some interesting themes. I was struck that this kind of method could be a better approach to some of the questions that scholars have used “content analysis” to answer in the past.<span class="citation"><a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a></span></p>
 <h3 id="unsupervised-learning">Unsupervised Learning</h3>
